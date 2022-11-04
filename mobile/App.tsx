@@ -2,7 +2,6 @@ import { NativeBaseProvider, StatusBar } from "native-base"
 import { Loading } from "./src/components/Loading"
 import { THEME } from "./src/styles/theme"
 import React from "react";
-import { Pools } from "./src/screens/Pools"
 import {
   useFonts,
   Roboto_400Regular,
@@ -10,6 +9,8 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto"
 import { AuthContextProvider } from "./src/context/AuthContext";
+
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -26,7 +27,7 @@ export default function App() {
           backgroundColor="transparent"
           translucent
         />
-        {fontsLoaded ? <Pools /> : <Loading />}
+        {fontsLoaded ? <Routes /> : <Loading />}
       </AuthContextProvider>
     </NativeBaseProvider>
   )
