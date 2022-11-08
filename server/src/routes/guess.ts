@@ -66,7 +66,7 @@ export async function guessRoutes(fastify: FastifyInstance) {
 
     if (!game) {
       return response.status(400).send({
-        message: "Game nt found."
+        message: "Game not found."
       })
     }
 
